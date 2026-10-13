@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextGen Fiber Routers | Lagos, Nigeria</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for smooth transitions */
+        .faq-answer {
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .faq-answer.open {
+            max-height: 200px;
+            opacity: 1;
+        }
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+        .faq-icon.open {
+            transform: rotate(180deg);
+        }
+        .thumbnail-active {
+            border-color: #0ea5e9;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <i class="fa-solid fa-wifi text-brand-600 text-3xl mr-2"></i>
+                    <span class="font-bold text-2xl text-brand-900 tracking-tight">Fiber<span class="text-brand-600">Connect</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#products" class="text-gray-600 hover:text-brand-600 font-medium transition">Products</a>
+                    <a href="#features" class="text-gray-600 hover:text-brand-600 font-medium transition">Features</a>
+                    <a href="#faq" class="text-gray-600 hover:text-brand-600 font-medium transition">FAQ</a>
+                </div>
+                <div>
+                    <a href="#products" class="bg-brand-600 hover:bg-brand-700 text-white px-6 py-2.5 rounded-full font-semibold transition shadow-md hover:shadow-lg">Shop Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="relative bg-brand-900 overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://placehold.co/1920x1080/0c4a6e/0c4a6e" alt="Network Background" class="w-full h-full object-cover opacity-20">
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-900 to-transparent"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-24 lg:py-32">
+            <div class="md:w-2/3">
+                <span class="inline-block py-1 px-3 rounded-full bg-brand-500/20 text-brand-100 text-sm font-semibold tracking-wider mb-4 border border-brand-500/30">AVAILABLE IN LAGOS, NIGERIA</span>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+                    Eliminate Bandwidth Bottlenecks.
+                </h1>
+                <p class="text-lg md:text-xl text-brand-100 mb-8 max-w-2xl leading-relaxed">
+                    Experience plug-and-play reliability with our premium fiber network routers. Designed for high-speed connectivity, seamless voice support, and ultimate stability for your home or business.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#products" class="bg-white text-brand-900 hover:bg-gray-100 px-8 py-3.5 rounded-full font-bold text-lg transition shadow-lg text-center">View Products</a>
+                    <a href="#faq" class="bg-transparent border-2 border-brand-100 text-brand-100 hover:bg-brand-800 px-8 py-3.5 rounded-full font-bold text-lg transition text-center">How it Works</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="features" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-6">
+                    <div class="w-16 h-16 mx-auto bg-brand-50 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-bolt text-brand-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Gigabit Speeds</h3>
+                    <p class="text-gray-600">Max out your ISP plan without hardware limitations holding you back.</p>
+                </div>
+                <div class="p-6">
+                    <div class="w-16 h-16 mx-auto bg-brand-50 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-plug-circle-check text-brand-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Plug & Play</h3>
+                    <p class="text-gray-600">Zero complicated setup required. Connect your fiber and get online instantly.</p>
+                </div>
+                <div class="p-6">
+                    <div class="w-16 h-16 mx-auto bg-brand-50 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-truck-fast text-brand-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Lagos Delivery</h3>
+                    <p class="text-gray-600">Fast, reliable dispatch across Lagos ensuring you stay connected when it matters.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="products" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Premium Fiber Equipment</h2>
+                <p class="mt-4 text-xl text-gray-600">Choose the right router for your network needs.</p>
+            </div>
+
+            <!-- Product 1: VSOL -->
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden mb-16 border border-gray-100">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                    <!-- Image Gallery Area -->
+                    <div class="p-8 bg-gray-100 flex flex-col justify-center">
+                        <!-- Main Image -->
+                        <div class="w-full h-80 bg-white rounded-xl mb-4 overflow-hidden flex items-center justify-center shadow-inner">
+                            <img id="vsol-main-img" src="WhatsApp Image 2026-10-13 at 09.46.01.jpeg" alt="VSOL V2804N-Z Router" class="max-w-full max-h-full object-contain p-4 transition-opacity duration-300">
+                        </div>
+                        <!-- Thumbnails -->
+                        <div class="flex gap-2 justify-center">
+                            <!-- Thumb 1 (Active) -->
+                            <button onclick="changeImage('vsol', 'WhatsApp Image 2026-10-13 at 09.46.01.jpeg', this)" class="vsol-thumb w-16 h-16 rounded-md bg-white border-2 border-brand-500 overflow-hidden opacity-100 transition">
+                                <img src="WhatsApp Image 2026-10-13 at 09.46.01.jpeg" alt="Angle 1" class="w-full h-full object-cover">
+                            </button>
+                            <!-- Thumb 2 (Placeholder) -->
+                            <button onclick="changeImage('vsol', 'https://placehold.co/600x400/eeeeee/333333?text=Angle+2', this)" class="vsol-thumb w-16 h-16 rounded-md bg-white border-2 border-transparent overflow-hidden opacity-60 hover:opacity-100 transition">
+                                <img src="https://placehold.co/600x400/eeeeee/333333?text=Angle+2" alt="Angle 2" class="w-full h-full object-cover">
+                            </button>
+                            <!-- Thumb 3 (Placeholder) -->
+                            <button onclick="changeImage('vsol', 'https://placehold.co/600x400/eeeeee/333333?text=Angle+3', this)" class="vsol-thumb w-16 h-16 rounded-md bg-white border-2 border-transparent overflow-hidden opacity-60 hover:opacity-100 transition">
+                                <img src="https://placehold.co/600x400/eeeeee/333333?text=Angle+3" alt="Angle 3" class="w-full h-full object-cover">
+                            </button>
+                            <!-- Thumb 4 (Placeholder) -->
+                            <button onclick="changeImage('vsol', 'https://placehold.co/600x400/eeeeee/333333?text=Angle+4', this)" class="vsol-thumb w-16 h-16 rounded-md bg-white border-2 border-transparent overflow-hidden opacity-60 hover:opacity-100 transition">
+                                <img src="https://placehold.co/600x400/eeeeee/333333?text=Angle+4" alt="Angle 4" class="w-full h-full object-cover">
+                            </button>
+                            <!-- Thumb 5 (Placeholder) -->
+                            <button onclick="changeImage('vsol', 'https://placehold.co/600x400/eeeeee/333333?text=Angle+5', this)" class="vsol-thumb w-16 h-16 rounded-md bg-white border-2 border-transparent overflow-hidden opacity-60 hover:opacity-100 transition">
+                                <img src="https://placehold.co/600x400/eeeeee/333333?text=Angle+5" alt="Angle 5" class="w-full h-full object-cover">
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Product Details -->
+                    <div class="p-8 lg:p-12 flex flex-col justify-center">
+                        <div class="uppercase tracking-wide text-sm text-brand-600 font-bold mb-1">High-Speed Hub</div>
+                        <h3 class="text-3xl font-extrabold text-gray-900 mb-4">VSOL V2804N-Z Wi-Fi 4 HGU</h3>
+                        <div class="text-3xl font-bold text-gray-900 mb-6">₦32,000</div>
+                        <p class="text-gray-600 mb-8 leading-relaxed">
+                            Engineered to handle intensive bandwidth demands. The VSOL V2804N-Z provides robust, reliable connections for modern smart homes and demanding office environments.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center text-gray-700">
+                                <i class="fa-solid fa-circle-check text-green-500 mr-3"></i> <strong>4 Gigabit Ethernet Ports</strong> for wired speed.
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fa-solid fa-circle-check text-green-500 mr-3"></i> Wi-Fi 4 support for broad wireless coverage.
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fa-solid fa-circle-check text-green-500 mr-3"></i> Ideal for eliminating local network bottlenecks.
+                            </li>
+                        </ul>
+                        <button class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-4 rounded-xl shadow-md hover:shadow-lg transition flex items-center justify-center">
+                            <i class="fa-solid fa-cart-shopping mr-2"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2: Baudcom -->
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                    <!-- Product Details (Left side for alternating layout) -->
+                    <div class="p-8 lg:p-12 flex flex-col justify-center order-2 lg:order-1">
+                        <div class="uppercase tracking-wide text-sm text-brand-600 font-bold mb-1">Data + Voice Solution</div>
+                        <h3 class="text-3xl font-extrabold text-gray-900 mb-4">Baudcom BD-ONT-414WL Dual-Mode</h3>
+                        <div class="text-3xl font-bold text-gray-900 mb-6">₦30,000</div>
+                        <p class="text-gray-600 mb-8 leading-relaxed">
+                            The ultimate all-in-one terminal. This dual-mode XPON ONT not only delivers high-speed internet but also integrates POTS support, making it perfect for setups requiring both data and traditional voice lines.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center text-gray-700">
+                                <i class="fa-solid fa-circle-check text-green-500 mr-3"></i> <strong>Data & Voice (POTS) Support</strong>.
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fa-solid fa-circle-check text-green-500 mr-3"></i> Dual-Mode XPON compatibility.
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fa-solid fa-circle-check text-green-500 mr-3"></i> Exceptional plug-and-play reliability.
+                            </li>
+                        </ul>
+                        <button class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-4 rounded-xl shadow-md hover:shadow-lg transition flex items-center justify-center">
+                            <i class="fa-solid fa-cart-shopping mr-2"></i> Add to Cart
+                        </button>
+                    </div>
+                    <!-- Image Gallery Area (Right side) -->
+                    <div class="p-8 bg-gray-100 flex flex-col justify-center order-1 lg:order-2">
+                        <!-- Main Image -->
+                        <div class="w-full h-80 bg-white rounded-xl mb-4 overflow-hidden flex items-center justify-center shadow-inner">
+                            <img id="baudcom-main-img" src="WhatsApp Image 2026-10-13 at 09.46.00.jpeg" alt="Baudcom Router" class="max-w-full max-h-full object-contain p-4 transition-opacity duration-300">
+                        </div>
+                        <!-- Thumbnails -->
+                        <div class="flex gap-2 justify-center">
+                            <!-- Thumb 1 (Active) -->
+                            <button onclick="changeImage('baudcom', 'WhatsApp Image 2026-10-13 at 09.46.00.jpeg', this)" class="baudcom-thumb w-16 h-16 rounded-md bg-white border-2 border-brand-500 overflow-hidden opacity-100 transition">
+                                <img src="WhatsApp Image 2026-10-13 at 09.46.00.jpeg" alt="Angle 1" class="w-full h-full object-cover">
+                            </button>
+                            <!-- Thumb 2 (Placeholder) -->
+                            <button onclick="changeImage('baudcom', 'https://placehold.co/600x400/eeeeee/333333?text=Angle+2', this)" class="baudcom-thumb w-16 h-16 rounded-md bg-white border-2 border-transparent overflow-hidden opacity-60 hover:opacity-100 transition">
+                                <img src="https://placehold.co/600x400/eeeeee/333333?text=Angle+2" alt="Angle 2" class="w-full h-full object-cover">
+                            </button>
+                            <!-- Thumb 3 (Placeholder) -->
+                            <button onclick="changeImage('baudcom', 'https://placehold.co/600x400/eeeeee/333333?text=Angle+3', this)" class="baudcom-thumb w-16 h-16 rounded-md bg-white border-2 border-transparent overflow-hidden opacity-60 hover:opacity-100 transition">
+                                <img src="https://placehold.co/600x400/eeeeee/333333?text=Angle+3" alt="Angle 3" class="w-full h-full object-cover">
+                            </button>
+                            <!-- Thumb 4 (Placeholder) -->
+                            <button onclick="changeImage('baudcom', 'https://placehold.co/600x400/eeeeee/333333?text=Angle+4', this)" class="baudcom-thumb w-16 h-16 rounded-md bg-white border-2 border-transparent overflow-hidden opacity-60 hover:opacity-100 transition">
+                                <img src="https://placehold.co/600x400/eeeeee/333333?text=Angle+4" alt="Angle 4" class="w-full h-full object-cover">
+                            </button>
+                            <!-- Thumb 5 (Placeholder) -->
+                            <button onclick="changeImage('baudcom', 'https://placehold.co/600x400/eeeeee/333333?text=Angle+5', this)" class="baudcom-thumb w-16 h-16 rounded-md bg-white border-2 border-transparent overflow-hidden opacity-60 hover:opacity-100 transition">
+                                <img src="https://placehold.co/600x400/eeeeee/333333?text=Angle+5" alt="Angle 5" class="w-full h-full object-cover">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="faq" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900">Frequently Asked Questions</h2>
+                <p class="mt-4 text-lg text-gray-600">Everything you need to know about our routers and delivery.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition focus:outline-none" onclick="toggleFaq('faq1')">
+                        <span class="font-semibold text-gray-900">Are these routers plug-and-play?</span>
+                        <i id="icon-faq1" class="fa-solid fa-chevron-down text-gray-500 faq-icon"></i>
+                    </button>
+                    <div id="faq1" class="faq-answer bg-white">
+                        <div class="px-6 py-4 text-gray-600">
+                            Yes, both the VSOL and Baudcom units are designed for straightforward installation. They eliminate bandwidth bottlenecks by easily interfacing with most modern fiber optic ISP connections with minimal configuration needed.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition focus:outline-none" onclick="toggleFaq('faq2')">
+                        <span class="font-semibold text-gray-900">Do you deliver anywhere in Lagos?</span>
+                        <i id="icon-faq2" class="fa-solid fa-chevron-down text-gray-500 faq-icon"></i>
+                    </button>
+                    <div id="faq2" class="faq-answer bg-white">
+                        <div class="px-6 py-4 text-gray-600">
+                            Absolutely! We offer fast dispatch and delivery services across the Lagos metropolis, ensuring you get your hardware swiftly.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition focus:outline-none" onclick="toggleFaq('faq3')">
+                        <span class="font-semibold text-gray-900">Which router should I choose?</span>
+                        <i id="icon-faq3" class="fa-solid fa-chevron-down text-gray-500 faq-icon"></i>
+                    </button>
+                    <div id="faq3" class="faq-answer bg-white">
+                        <div class="px-6 py-4 text-gray-600">
+                            If you strictly need high-speed wired connections for multiple devices, the VSOL with its 4 Gigabit ports is ideal. If you require both data internet and traditional voice line (telephone/POTS) support, the Baudcom Dual-Mode ONT is your best choice.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-900 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex justify-center items-center mb-6 text-white">
+                <i class="fa-solid fa-wifi text-brand-500 text-2xl mr-2"></i>
+                <span class="font-bold text-xl tracking-tight">Fiber<span class="text-brand-500">Connect</span></span>
+            </div>
+            <p class="text-gray-400 mb-6">Providing top-tier fiber solutions to Lagos, Nigeria.</p>
+            <p class="text-gray-500 text-sm">&copy; 2026 FiberConnect Nigeria. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Image Gallery Logic
+        function changeImage(productId, newSrc, thumbElement) {
+            // Update main image source
+            const mainImg = document.getElementById(`${productId}-main-img`);
+            mainImg.style.opacity = '0';
+            
+            setTimeout(() => {
+                mainImg.src = newSrc;
+                mainImg.style.opacity = '1';
+            }, 150);
+
+            // Update thumbnail styles
+            const allThumbs = document.querySelectorAll(`.${productId}-thumb`);
+            allThumbs.forEach(btn => {
+                btn.classList.remove('border-brand-500', 'opacity-100');
+                btn.classList.add('border-transparent', 'opacity-60');
+            });
+            
+            thumbElement.classList.remove('border-transparent', 'opacity-60');
+            thumbElement.classList.add('border-brand-500', 'opacity-100');
+        }
+
+        // FAQ Accordion Logic
+        function toggleFaq(id) {
+            const answer = document.getElementById(id);
+            const icon = document.getElementById(`icon-${id}`);
+            
+            // Check if currently open
+            const isOpen = answer.classList.contains('open');
+            
+            // Close all others first (optional, but makes it cleaner)
+            const allAnswers = document.querySelectorAll('.faq-answer');
+            const allIcons = document.querySelectorAll('.faq-icon');
+            
+            allAnswers.forEach(el => el.classList.remove('open'));
+            allIcons.forEach(el => el.classList.remove('open'));
+
+            // Toggle clicked one
+            if (!isOpen) {
+                answer.classList.add('open');
+                icon.classList.add('open');
+            }
+        }
+    </script>
+</body>
+</html>
